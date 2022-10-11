@@ -1,5 +1,24 @@
-.App {
-  text-align: center;
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --work-light-red: (work)====: hsl(15, 100%, 70%);
+  --play-soft-blue: hsl(195, 74%, 62%);
+  --study-light-red: hsl(348, 100%, 68%);
+  --exercise-lime-green: hsl(145, 58%, 55%);
+  --social-violet: hsl(264, 64%, 52%);
+  --self-care-orange: hsl(43, 84%, 65%);
+
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desat-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
 }
 
 .App-logo {
@@ -13,13 +32,14 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.app-header {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  /* flex-direction: column; */
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
   font-size: calc(10px + 2vmin);
   color: white;
 }
