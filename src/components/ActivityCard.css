@@ -1,7 +1,20 @@
 .card {
-    height: 100px;
-    width: max-content;
-    border: 1px solid hotpink;
+    display: flex;
+    height: 220px;
+    /* width: max-content; */
+    width: 220px;
     /* margin: 10px; */
-    padding: 10px;
+    /* padding: 10px; */
+    border-radius: 15px;   
+    /* background-image: url('../../public/images/icon-exercise.svg'); */
+    background-repeat: no-repeat;
+    background-position: top 0px right 10px;
+}
+
+.activity-container {
+    height: 175px;
+    width: 100%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    align-self: flex-end;   
 }
