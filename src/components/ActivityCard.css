@@ -11,9 +11,21 @@
 }
 
 .activity-container {
+    box-sizing: border-box;
     height: 170px;
     width: 100%;
     background-color: hsl(235, 46%, 20%);
     border-radius: 15px;
-    align-self: flex-end;   
+    align-self: flex-end;
+    padding: 1.5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.header img {
+    object-fit: contain;
 }
