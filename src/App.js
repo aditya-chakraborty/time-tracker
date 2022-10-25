@@ -6,17 +6,25 @@ import workIcon from './images/icon-work.svg'
 import selfCareIcon from './images/icon-self-care.svg'
 import socialIcon from './images/icon-social.svg'
 import studyIcon from './images/icon-study.svg'
+import userImg from './images/image-jeremy.png'
 
 function App() {
   // const data = fetch('data.json')
   return (
     <div className="app">
       <div className="app-header">
-        <div className='panel'>
+        <section className='panel'>
           <div className="profile-card">
-            
+            <img src={userImg} alt="user" className="user-img" />
+            <p className='report'>Report for</p>
+            <header className='user-name'>Jeremy Robson</header>
           </div>
-        </div>
+          <div className='tabs'>
+            <li className='tab'>Daily</li>
+            <li className='tab'>Weekly</li>
+            <li className='tab'>Monthly</li>
+          </div>
+        </section>
         {[{
           id: 1,
           bgColor: 'hsl(15, 100%, 70%)',
