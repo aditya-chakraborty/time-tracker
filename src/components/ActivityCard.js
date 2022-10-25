@@ -5,7 +5,7 @@ const ActivityCard = (props) => {
   return (
     <div 
       className="card" 
-      style={{backgroundColor: props.bgColor, backgroundImage: `url(../images/icon-${props.img}.svg)`}}
+      style={{backgroundColor: props.bgColor, backgroundImage: `url(${props.img})`}}
     >
       <div className="activity-container" />
     </div>

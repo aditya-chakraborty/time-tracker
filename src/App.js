@@ -15,35 +15,37 @@ function App() {
         {[{
           id: 1,
           bgColor: 'hsl(15, 100%, 70%)',
-          icon: 'work'
+          icon: workIcon,
         },
       {
         id: 2,
         bgColor: 'hsl(195, 74%, 62%)',
-        icon: 'play'
+        icon: playIcon,
       },
       {
         id: 3,
         bgColor: 'hsl(348, 100%, 68%)',
-        icon: 'study'
+        icon: studyIcon,
       },
       {
         id: 4,
         bgColor: 'hsl(145, 58%, 55%)',
-        icon: 'exercise'
+        icon: exerciseIcon,
       },
       {
         id: 5,
         bgColor: 'hsl(264, 64%, 52%)',
-        icon: 'social'
+        icon: socialIcon,
       },
       {
         id: 6,
         bgColor: 'hsl(43, 84%, 65%)',
-        icon: 'self-care'
+        icon: selfCareIcon,
       },
     ].map(val => {
-          return <ActivityCard bgColor={val.bgColor} img={val.icon} />
+          return (
+            <ActivityCard key={val.id} bgColor={val.bgColor} img={val.icon} />
+          )
         })}
       </div>
     </div>
