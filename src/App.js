@@ -12,36 +12,41 @@ function App() {
   return (
     <div className="app">
       <div className="app-header">
+        <div className='panel'>
+          <div className="profile-card">
+            
+          </div>
+        </div>
         {[{
           id: 1,
           bgColor: 'hsl(15, 100%, 70%)',
           icon: workIcon,
         },
-      {
-        id: 2,
-        bgColor: 'hsl(195, 74%, 62%)',
-        icon: playIcon,
-      },
-      {
-        id: 3,
-        bgColor: 'hsl(348, 100%, 68%)',
-        icon: studyIcon,
-      },
-      {
-        id: 4,
-        bgColor: 'hsl(145, 58%, 55%)',
-        icon: exerciseIcon,
-      },
-      {
-        id: 5,
-        bgColor: 'hsl(264, 64%, 52%)',
-        icon: socialIcon,
-      },
-      {
-        id: 6,
-        bgColor: 'hsl(43, 84%, 65%)',
-        icon: selfCareIcon,
-      },
+        {
+          id: 2,
+          bgColor: 'hsl(195, 74%, 62%)',
+          icon: playIcon,
+        },
+        {
+          id: 3,
+          bgColor: 'hsl(348, 100%, 68%)',
+          icon: studyIcon,
+        },
+        {
+          id: 4,
+          bgColor: 'hsl(145, 58%, 55%)',
+          icon: exerciseIcon,
+        },
+        {
+          id: 5,
+          bgColor: 'hsl(264, 64%, 52%)',
+          icon: socialIcon,
+        },
+        {
+          id: 6,
+          bgColor: 'hsl(43, 84%, 65%)',
+          icon: selfCareIcon,
+        },
     ].map(val => {
           return (
             <ActivityCard key={val.id} bgColor={val.bgColor} img={val.icon} />
