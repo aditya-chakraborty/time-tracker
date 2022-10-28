@@ -1,3 +1,8 @@
+:root {
+    --pale-blue: hsl(236, 100%, 87%);
+    --desat-blue: hsl(235, 45%, 61%);
+}
+
 .card {
     display: flex;
     height: 220px;
@@ -28,4 +33,24 @@
 
 .header img {
     object-fit: contain;
+}
+
+.time-display {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.time__current {
+    font-size: 48px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.time__prev {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    color: var(--pale-blue)
 }

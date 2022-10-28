@@ -88,6 +88,7 @@ function App() {
           return (
             <ActivityCard
               key={val.id}
+              timeframe={timeframe}
               bgColor={val.color}
               img={val.icon}
               title={val.title}
