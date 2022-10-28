@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import './App.css'
 import ActivityCard from './components/ActivityCard'
 import exerciseIcon from './images/icon-exercise.svg'
@@ -9,7 +10,28 @@ import studyIcon from './images/icon-study.svg'
 import userImg from './images/image-jeremy.png'
 
 function App() {
-  // const data = fetch('data.json')
+  const getData = async () => {
+    const response = await fetch('data.json')
+    const data = await response.json()
+    console.log(data, "data");
+  } 
+
+  const Timeframe = {
+    Daily: 'daily',
+    Weekly: 'weekly',
+    Monthly: 'monthly',
+  }
+
+  const [ timeframe, setTimeframe ] = useState(Timeframe.Daily)
+
+  const updateTimeframe = (timeframe) => {
+    setTimeframe(timeframe)
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <div className="app">
       <div className="app-header">
@@ -20,9 +42,9 @@ function App() {
             <header className='user-name'>Jeremy Robson</header>
           </div>
           <div className='tabs'>
-            <li className='tab'>Daily</li>
-            <li className='tab'>Weekly</li>
-            <li className='tab'>Monthly</li>
+            <li className='tab' onClick={(e) => updateTimeframe(Timeframe.Daily)}>Daily</li>
+            <li className='tab' onClick={(e) => updateTimeframe(Timeframe.Weekly)}>Weekly</li>
+            <li className='tab' onClick={(e) => updateTimeframe(Timeframe.Monthly)}>Monthly</li>
           </div>
         </section>
         {[{
