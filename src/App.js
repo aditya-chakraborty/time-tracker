@@ -51,6 +51,8 @@ function App() {
     setTimeframe(timeframe)
   }
 
+  const isActive = (currTime) => currTime === timeframe
+
   const getData = async () => {
     const response = await fetch('data.json')
     const result = await response.json()
@@ -79,9 +81,24 @@ function App() {
             <header className='user-name'>Jeremy Robson</header>
           </div>
           <div className='tabs'>
-            <li className='tab' onClick={(e) => updateTimeframe(Timeframe.Daily)}>Daily</li>
-            <li className='tab' onClick={(e) => updateTimeframe(Timeframe.Weekly)}>Weekly</li>
-            <li className='tab' onClick={(e) => updateTimeframe(Timeframe.Monthly)}>Monthly</li>
+            <li
+              className={`tab ${isActive(Timeframe.Daily) ? 'active' :''}`}
+              onClick={(e) => updateTimeframe(Timeframe.Daily)}
+            >
+              Daily
+            </li>
+            <li
+              className={`tab ${isActive(Timeframe.Weekly) ? 'active' :''}`}
+              onClick={(e) => updateTimeframe(Timeframe.Weekly)}
+            >
+              Weekly
+            </li>
+            <li
+              className={`tab ${isActive(Timeframe.Monthly) ? 'active' :''}`}
+              onClick={(e) => updateTimeframe(Timeframe.Monthly)}
+            >
+              Monthly
+            </li>
           </div>
         </section>
         {activityDetails.map(val => {
