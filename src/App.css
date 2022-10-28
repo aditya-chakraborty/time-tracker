@@ -93,8 +93,9 @@
 
 .report {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
+  color: var(--pale-blue)
 }
 
 .user-name {

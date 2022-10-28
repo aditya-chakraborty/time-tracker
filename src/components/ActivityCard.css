@@ -12,15 +12,15 @@
     /* padding: 10px; */
     border-radius: 15px;   
     background-repeat: no-repeat;
-    background-position: top -5px right 10px;
+    background-position: top -8px right 10px;
 }
 
 .activity-container {
     box-sizing: border-box;
-    height: 170px;
+    height: 175px;
     width: 100%;
     background-color: hsl(235, 46%, 20%);
-    border-radius: 15px;
+    border-radius: 13px;
     align-self: flex-end;
     padding: 1.5rem;
 }
