@@ -10,11 +10,6 @@ import studyIcon from './images/icon-study.svg'
 import userImg from './images/image-jeremy.png'
 
 function App() {
-  const getData = async () => {
-    const response = await fetch('data.json')
-    const data = await response.json()
-    console.log(data, "data");
-  } 
 
   const Timeframe = {
     Daily: 'daily',
@@ -22,15 +17,57 @@ function App() {
     Monthly: 'monthly',
   }
 
+  const ActivityStyle = {
+    'Work': {
+      color: 'hsl(15, 100%, 70%)',
+      icon: workIcon,
+    },
+    'Play': {
+      color: 'hsl(195, 74%, 62%)',
+      icon: playIcon,
+    },
+    'Study': {
+      color: 'hsl(348, 100%, 68%)',
+      icon: studyIcon,
+    },
+    'Exercise': {
+      color: 'hsl(145, 58%, 55%)',
+      icon: exerciseIcon,
+    },
+    'Social': {
+      color: 'hsl(264, 64%, 52%)',
+      icon: socialIcon,
+    },
+    'Self Care': {
+      color: 'hsl(43, 84%, 65%)',
+      icon: selfCareIcon,
+    },
+  }
+
   const [ timeframe, setTimeframe ] = useState(Timeframe.Daily)
+  const [ data, setData ] = useState([])
 
   const updateTimeframe = (timeframe) => {
     setTimeframe(timeframe)
   }
 
+  const getData = async () => {
+    const response = await fetch('data.json')
+    const result = await response.json()
+    setData(result)
+  } 
+
   useEffect(() => {
     getData()
   }, [])
+
+  const activityDetails = data.map((activity, idx) => {
+    return {
+      ...activity,
+      ...ActivityStyle[activity.title],
+      id: idx,
+    }
+  })
 
   return (
     <div className="app">
@@ -47,49 +84,14 @@ function App() {
             <li className='tab' onClick={(e) => updateTimeframe(Timeframe.Monthly)}>Monthly</li>
           </div>
         </section>
-        {[{
-          id: 1,
-          title: 'Work',
-          bgColor: 'hsl(15, 100%, 70%)',
-          icon: workIcon,
-        },
-        {
-          id: 2,
-          title: 'Play',
-          bgColor: 'hsl(195, 74%, 62%)',
-          icon: playIcon,
-        },
-        {
-          id: 3,
-          title: 'Study',
-          bgColor: 'hsl(348, 100%, 68%)',
-          icon: studyIcon,
-        },
-        {
-          id: 4,
-          title: 'Exercise',
-          bgColor: 'hsl(145, 58%, 55%)',
-          icon: exerciseIcon,
-        },
-        {
-          id: 5,
-          title: 'Social',
-          bgColor: 'hsl(264, 64%, 52%)',
-          icon: socialIcon,
-        },
-        {
-          id: 6,
-          title: 'Self Care',
-          bgColor: 'hsl(43, 84%, 65%)',
-          icon: selfCareIcon,
-        },
-    ].map(val => {
+        {activityDetails.map(val => {
           return (
             <ActivityCard
               key={val.id}
-              bgColor={val.bgColor}
+              bgColor={val.color}
               img={val.icon}
               title={val.title}
+              hours={val.timeframes[timeframe]}
             />
           )
         })}
