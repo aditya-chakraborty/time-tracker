@@ -1,6 +1,7 @@
 :root {
     --pale-blue: hsl(236, 100%, 87%);
     --desat-blue: hsl(235, 45%, 61%);
+    --blue: hsl(246, 80%, 60%);
 }
 
 .card {
@@ -23,6 +24,12 @@
     border-radius: 13px;
     align-self: flex-end;
     padding: 1.5rem;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.activity-container:hover {
+    background-color: var(--desat-blue);
 }
 
 .header {

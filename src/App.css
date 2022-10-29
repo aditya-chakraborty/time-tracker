@@ -81,6 +81,11 @@
   padding: 0.75rem 0;
   cursor: pointer;
   color: var(--desat-blue);
+  transition: all 150ms ease-in-out;
+}
+
+.tab:hover{
+  color: white;
 }
 
 .active {
