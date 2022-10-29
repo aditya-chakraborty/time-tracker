@@ -27,7 +27,7 @@ The challenge is to build a user interface that looks and feels as close as poss
 
 ### Screenshot
 
-![](./screenshot.jpeg)
+![](./public/screenshot.jpeg)
 
 ### Links
 
@@ -87,7 +87,7 @@ My focus in this project has been on achieving more with lesser code. I am proud
 
 ### Continued development
 
-This project has also been a good endeavor for me to get better at creating responsive UI. I also obtained experience working with CSS Grids. Although more of a Flexbox-person, I am so glas to get this opportunity to leverage the power of CSS Grids. I want to keep focussing more on creating mobile-first screens and add responsiveness to the user interfaces I create, and hope to achieve mastery at it in due time!⚡️
+This project has been a good endeavor for me to get better at creating responsive UI. I also obtained experience working with CSS Grids. Although more of a Flexbox-person, I am so glad to get this opportunity to leverage the power of CSS Grids. I want to keep focussing more on creating mobile-first screens and add responsiveness to the user interfaces I create, and hope to achieve mastery at it in due time!⚡️
 
 ### Useful resources
 
